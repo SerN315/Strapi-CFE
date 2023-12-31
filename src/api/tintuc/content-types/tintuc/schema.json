@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tintucs",
+  "info": {
+    "singularName": "tintuc",
+    "pluralName": "tintucs",
+    "displayName": "tintuc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "Tuade": {
+      "type": "string"
+    },
+    "anh_1": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "doanvan1": {
+      "type": "text"
+    },
+    "anh_2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "doanvan2": {
+      "type": "text"
+    }
+  }
+}
