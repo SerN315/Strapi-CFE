@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tintuc",
     "pluralName": "tintucs",
-    "displayName": "tintuc"
+    "displayName": "tintuc",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,19 +19,34 @@
       "type": "string"
     },
     "anh_1": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "doanvan1": {
       "type": "text"
     },
     "anh_2": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "doanvan2": {
+      "type": "text"
+    },
+    "anh_3": {
       "allowedTypes": [
         "images",
         "files",
@@ -40,7 +56,7 @@
       "type": "media",
       "multiple": true
     },
-    "doanvan2": {
+    "doanvan3": {
       "type": "text"
     }
   }

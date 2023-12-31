@@ -368,6 +368,7 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     singularName: 'tintuc';
     pluralName: 'tintucs';
     displayName: 'tintuc';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -379,6 +380,8 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     doanvan1: Attribute.Text;
     anh_2: Attribute.Media;
     doanvan2: Attribute.Text;
+    anh_3: Attribute.Media;
+    doanvan3: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
