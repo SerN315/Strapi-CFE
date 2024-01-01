@@ -28,16 +28,66 @@
       "type": "text"
     },
     "anh_1": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "anh_2": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_3": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "doanvan4": {
+      "type": "text"
+    },
+    "doanvan5": {
+      "type": "text"
+    },
+    "doanvan6": {
+      "type": "string"
+    },
+    "doanvan7": {
+      "type": "text"
+    },
+    "doanvan8": {
+      "type": "string"
+    },
+    "doanvan9": {
+      "type": "text"
+    },
+    "doanvan10": {
+      "type": "text"
+    },
+    "doanvan11": {
+      "type": "string"
+    },
+    "doanvan12": {
+      "type": "text"
+    },
+    "anh_4": {
       "allowedTypes": [
         "images",
         "files",
@@ -47,7 +97,57 @@
       "type": "media",
       "multiple": true
     },
-    "anh_3": {
+    "anh_5": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "anh_6": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "anh_7": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "anh_8": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "anh_9": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "anh_10": {
       "allowedTypes": [
         "images",
         "files",
