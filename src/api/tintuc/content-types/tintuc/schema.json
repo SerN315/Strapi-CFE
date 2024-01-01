@@ -18,33 +18,34 @@
     "Tuade": {
       "type": "string"
     },
-    "anh_1": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "doanvan1": {
       "type": "text"
     },
-    "anh_2": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
+    "doanvan2": {
+      "type": "text"
+    },
+    "doanvan3": {
+      "type": "text"
+    },
+    "anh_1": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
-    "doanvan2": {
-      "type": "text"
+    "anh_2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     },
     "anh_3": {
       "allowedTypes": [
@@ -55,9 +56,6 @@
       ],
       "type": "media",
       "multiple": true
-    },
-    "doanvan3": {
-      "type": "text"
     }
   }
 }

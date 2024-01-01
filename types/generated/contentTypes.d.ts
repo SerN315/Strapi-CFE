@@ -376,12 +376,12 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
   attributes: {
     date: Attribute.Date;
     Tuade: Attribute.String;
-    anh_1: Attribute.Media;
     doanvan1: Attribute.Text;
-    anh_2: Attribute.Media;
     doanvan2: Attribute.Text;
-    anh_3: Attribute.Media;
     doanvan3: Attribute.Text;
+    anh_1: Attribute.Media;
+    anh_2: Attribute.Media;
+    anh_3: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
