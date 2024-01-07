@@ -362,6 +362,45 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutIntroductionAboutIntroduction
+  extends Schema.CollectionType {
+  collectionName: 'about_introductions';
+  info: {
+    singularName: 'about-introduction';
+    pluralName: 'about-introductions';
+    displayName: 'About - introduction';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_1: Attribute.Media;
+    anh_2: Attribute.Media;
+    anh_3: Attribute.Media;
+    anh_4: Attribute.Media;
+    tieu_de: Attribute.String & Attribute.Required & Attribute.Unique;
+    tieu_de_phu: Attribute.String & Attribute.Required;
+    doan_van_1: Attribute.Text & Attribute.Required;
+    doan_van_2: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-introduction.about-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-introduction.about-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTintucTintuc extends Schema.CollectionType {
   collectionName: 'tintucs';
   info: {
@@ -832,6 +871,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
       'api::tintuc.tintuc': ApiTintucTintuc;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
