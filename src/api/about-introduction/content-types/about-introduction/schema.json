@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_introductions",
+  "info": {
+    "singularName": "about-introduction",
+    "pluralName": "about-introductions",
+    "displayName": "About - introduction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anh_1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "anh_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "anh_3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "anh_4": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "tieu_de": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tieu_de_phu": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "doan_van_1": {
+      "type": "text",
+      "required": true
+    },
+    "doan_van_2": {
+      "type": "text"
+    }
+  }
+}
