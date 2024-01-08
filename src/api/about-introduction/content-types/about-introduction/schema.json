@@ -64,6 +64,14 @@
     },
     "doan_van_2": {
       "type": "text"
+    },
+    "vi_tri": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "max": 10,
+      "min": 1,
+      "default": 1
     }
   }
 }

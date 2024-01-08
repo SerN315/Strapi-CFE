@@ -383,6 +383,14 @@ export interface ApiAboutIntroductionAboutIntroduction
     tieu_de_phu: Attribute.String & Attribute.Required;
     doan_van_1: Attribute.Text & Attribute.Required;
     doan_van_2: Attribute.Text;
+    vi_tri: Attribute.Integer &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 10;
+      }> &
+      Attribute.DefaultTo<1>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
