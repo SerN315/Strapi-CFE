@@ -70,7 +70,8 @@
       "required": true,
       "unique": true,
       "max": 10,
-      "min": 1
+      "min": 1,
+      "default": 1
     }
   }
 }

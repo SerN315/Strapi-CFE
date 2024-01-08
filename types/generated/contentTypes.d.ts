@@ -389,7 +389,8 @@ export interface ApiAboutIntroductionAboutIntroduction
       Attribute.SetMinMax<{
         min: 1;
         max: 10;
-      }>;
+      }> &
+      Attribute.DefaultTo<1>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
