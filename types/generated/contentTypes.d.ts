@@ -362,107 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutIntroductionAboutIntroduction
-  extends Schema.CollectionType {
-  collectionName: 'about_introductions';
-  info: {
-    singularName: 'about-introduction';
-    pluralName: 'about-introductions';
-    displayName: 'About - introduction';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    anh_1: Attribute.Media;
-    anh_2: Attribute.Media;
-    anh_3: Attribute.Media;
-    anh_4: Attribute.Media;
-    tieu_de: Attribute.String & Attribute.Required & Attribute.Unique;
-    tieu_de_phu: Attribute.String & Attribute.Required;
-    doan_van_1: Attribute.Text & Attribute.Required;
-    doan_van_2: Attribute.Text;
-    vi_tri: Attribute.Integer &
-      Attribute.Required &
-      Attribute.Unique &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 10;
-      }> &
-      Attribute.DefaultTo<1>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about-introduction.about-introduction',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about-introduction.about-introduction',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTintucTintuc extends Schema.CollectionType {
-  collectionName: 'tintucs';
-  info: {
-    singularName: 'tintuc';
-    pluralName: 'tintucs';
-    displayName: 'tintuc';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    Tuade: Attribute.String;
-    doanvan1: Attribute.Text;
-    doanvan2: Attribute.Text;
-    doanvan3: Attribute.Text;
-    anh_1: Attribute.Media;
-    anh_2: Attribute.Media;
-    anh_3: Attribute.Media;
-    doanvan4: Attribute.Text;
-    doanvan5: Attribute.Text;
-    doanvan6: Attribute.String;
-    doanvan7: Attribute.Text;
-    doanvan8: Attribute.String;
-    doanvan9: Attribute.Text;
-    doanvan10: Attribute.Text;
-    doanvan11: Attribute.String;
-    doanvan12: Attribute.Text;
-    anh_4: Attribute.Media;
-    anh_5: Attribute.Media;
-    anh_6: Attribute.Media;
-    anh_7: Attribute.Media;
-    anh_8: Attribute.Media;
-    anh_9: Attribute.Media;
-    anh_10: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::tintuc.tintuc',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::tintuc.tintuc',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -869,6 +768,143 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutIntroductionAboutIntroduction
+  extends Schema.CollectionType {
+  collectionName: 'about_introductions';
+  info: {
+    singularName: 'about-introduction';
+    pluralName: 'about-introductions';
+    displayName: 'About - introduction';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_1: Attribute.Media;
+    anh_2: Attribute.Media;
+    anh_3: Attribute.Media;
+    anh_4: Attribute.Media;
+    tieu_de: Attribute.String & Attribute.Required & Attribute.Unique;
+    tieu_de_phu: Attribute.String & Attribute.Required;
+    doan_van_1: Attribute.Text & Attribute.Required;
+    doan_van_2: Attribute.Text;
+    vi_tri: Attribute.Integer &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 10;
+      }> &
+      Attribute.DefaultTo<1>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-introduction.about-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-introduction.about-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGioiThieuThanhVienGioiThieuThanhVien
+  extends Schema.CollectionType {
+  collectionName: 'gioi_thieu_thanh_viens';
+  info: {
+    singularName: 'gioi-thieu-thanh-vien';
+    pluralName: 'gioi-thieu-thanh-viens';
+    displayName: 'GioiThieu - ThanhVien';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HoTen: Attribute.String & Attribute.Required & Attribute.Unique;
+    ChucVu: Attribute.String;
+    MoTaThem: Attribute.Text;
+    Anh: Attribute.Media & Attribute.Required;
+    Ban: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTintucTintuc extends Schema.CollectionType {
+  collectionName: 'tintucs';
+  info: {
+    singularName: 'tintuc';
+    pluralName: 'tintucs';
+    displayName: 'tintuc';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    Tuade: Attribute.String;
+    doanvan1: Attribute.Text;
+    doanvan2: Attribute.Text;
+    doanvan3: Attribute.Text;
+    anh_1: Attribute.Media;
+    anh_2: Attribute.Media;
+    anh_3: Attribute.Media;
+    doanvan4: Attribute.Text;
+    doanvan5: Attribute.Text;
+    doanvan6: Attribute.String;
+    doanvan7: Attribute.Text;
+    doanvan8: Attribute.String;
+    doanvan9: Attribute.Text;
+    doanvan10: Attribute.Text;
+    doanvan11: Attribute.String;
+    doanvan12: Attribute.Text;
+    anh_4: Attribute.Media;
+    anh_5: Attribute.Media;
+    anh_6: Attribute.Media;
+    anh_7: Attribute.Media;
+    anh_8: Attribute.Media;
+    anh_9: Attribute.Media;
+    anh_10: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tintuc.tintuc',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tintuc.tintuc',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -879,8 +915,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
-      'api::tintuc.tintuc': ApiTintucTintuc;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -889,6 +923,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
+      'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
+      'api::tintuc.tintuc': ApiTintucTintuc;
     }
   }
 }

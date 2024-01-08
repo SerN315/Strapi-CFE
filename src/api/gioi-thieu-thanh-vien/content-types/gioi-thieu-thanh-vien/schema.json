@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gioi_thieu_thanh_viens",
+  "info": {
+    "singularName": "gioi-thieu-thanh-vien",
+    "pluralName": "gioi-thieu-thanh-viens",
+    "displayName": "GioiThieu - ThanhVien",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HoTen": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ChucVu": {
+      "type": "string",
+      "required": false
+    },
+    "MoTaThem": {
+      "type": "text"
+    },
+    "Anh": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Ban": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
