@@ -35,6 +35,10 @@
     "Ban": {
       "type": "string",
       "required": true
+    },
+    "Gen": {
+      "type": "integer",
+      "required": true
     }
   }
 }
