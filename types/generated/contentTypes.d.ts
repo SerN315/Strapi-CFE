@@ -833,6 +833,7 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
     MoTaThem: Attribute.Text;
     Anh: Attribute.Media & Attribute.Required;
     Ban: Attribute.String & Attribute.Required;
+    Gen: Attribute.Integer & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
