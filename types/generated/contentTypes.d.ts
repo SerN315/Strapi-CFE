@@ -815,6 +815,47 @@ export interface ApiAboutIntroductionAboutIntroduction
   };
 }
 
+export interface ApiFundingFunding extends Schema.CollectionType {
+  collectionName: 'fundings';
+  info: {
+    singularName: 'funding';
+    pluralName: 'fundings';
+    displayName: 'Funding';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Icons: Attribute.String;
+    Description: Attribute.Text;
+    Title_2: Attribute.String;
+    Icons_2: Attribute.String;
+    Des_2: Attribute.String;
+    Title_3: Attribute.String;
+    Icons_3: Attribute.String;
+    Des_3: Attribute.String;
+    Title_4: Attribute.String;
+    Icons_4: Attribute.String;
+    Des_4: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::funding.funding',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::funding.funding',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGioiThieuThanhVienGioiThieuThanhVien
   extends Schema.CollectionType {
   collectionName: 'gioi_thieu_thanh_viens';
@@ -925,6 +966,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
+      'api::funding.funding': ApiFundingFunding;
       'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
       'api::tintuc.tintuc': ApiTintucTintuc;
     }

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundings",
+  "info": {
+    "singularName": "funding",
+    "pluralName": "fundings",
+    "displayName": "Funding"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icons": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Title_2": {
+      "type": "string"
+    },
+    "Icons_2": {
+      "type": "string"
+    },
+    "Des_2": {
+      "type": "string"
+    },
+    "Title_3": {
+      "type": "string"
+    },
+    "Icons_3": {
+      "type": "string"
+    },
+    "Des_3": {
+      "type": "string"
+    },
+    "Title_4": {
+      "type": "string"
+    },
+    "Icons_4": {
+      "type": "string"
+    },
+    "Des_4": {
+      "type": "string"
+    }
+  }
+}
