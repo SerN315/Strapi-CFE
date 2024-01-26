@@ -4,7 +4,8 @@
   "info": {
     "singularName": "funding",
     "pluralName": "fundings",
-    "displayName": "Funding"
+    "displayName": "Funding",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,33 +20,6 @@
     },
     "Description": {
       "type": "text"
-    },
-    "Title_2": {
-      "type": "string"
-    },
-    "Icons_2": {
-      "type": "string"
-    },
-    "Des_2": {
-      "type": "string"
-    },
-    "Title_3": {
-      "type": "string"
-    },
-    "Icons_3": {
-      "type": "string"
-    },
-    "Des_3": {
-      "type": "string"
-    },
-    "Title_4": {
-      "type": "string"
-    },
-    "Icons_4": {
-      "type": "string"
-    },
-    "Des_4": {
-      "type": "string"
     }
   }
 }

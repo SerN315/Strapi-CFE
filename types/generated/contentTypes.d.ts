@@ -821,6 +821,7 @@ export interface ApiFundingFunding extends Schema.CollectionType {
     singularName: 'funding';
     pluralName: 'fundings';
     displayName: 'Funding';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -829,15 +830,6 @@ export interface ApiFundingFunding extends Schema.CollectionType {
     Title: Attribute.String;
     Icons: Attribute.String;
     Description: Attribute.Text;
-    Title_2: Attribute.String;
-    Icons_2: Attribute.String;
-    Des_2: Attribute.String;
-    Title_3: Attribute.String;
-    Icons_3: Attribute.String;
-    Des_3: Attribute.String;
-    Title_4: Attribute.String;
-    Icons_4: Attribute.String;
-    Des_4: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
