@@ -15,11 +15,11 @@
     "HoTen": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "ChucVu": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "MoTaThem": {
       "type": "text"
@@ -34,7 +34,7 @@
     },
     "Ban": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "Gen": {
       "type": "integer",

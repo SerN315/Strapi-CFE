@@ -861,11 +861,11 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
     draftAndPublish: true;
   };
   attributes: {
-    HoTen: Attribute.String & Attribute.Required & Attribute.Unique;
-    ChucVu: Attribute.String;
+    HoTen: Attribute.String & Attribute.Required;
+    ChucVu: Attribute.String & Attribute.Required;
     MoTaThem: Attribute.Text;
     Anh: Attribute.Media & Attribute.Required;
-    Ban: Attribute.String & Attribute.Required;
+    Ban: Attribute.String;
     Gen: Attribute.Integer & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
