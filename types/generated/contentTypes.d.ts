@@ -821,12 +821,15 @@ export interface ApiFooterFooter extends Schema.CollectionType {
     singularName: 'footer';
     pluralName: 'footers';
     displayName: 'Footer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    dia_chi_lien_he: Attribute.String;
+    address: Attribute.String;
+    sdt: Attribute.String;
+    email: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
