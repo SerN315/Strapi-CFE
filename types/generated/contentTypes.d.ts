@@ -972,6 +972,44 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
   };
 }
 
+export interface ApiTrangChuIntroductionTrangChuIntroduction
+  extends Schema.CollectionType {
+  collectionName: 'trang_chu_introductions';
+  info: {
+    singularName: 'trang-chu-introduction';
+    pluralName: 'trang-chu-introductions';
+    displayName: 'TrangChu - introduction';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_1: Attribute.Media;
+    anh_2: Attribute.Media;
+    anh_3: Attribute.Media;
+    tieu_de_1: Attribute.String;
+    tieu_de_2: Attribute.String;
+    doan_van_1: Attribute.Text;
+    doan_van_2: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::trang-chu-introduction.trang-chu-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::trang-chu-introduction.trang-chu-introduction',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -995,6 +1033,7 @@ declare module '@strapi/types' {
       'api::funding.funding': ApiFundingFunding;
       'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
       'api::tintuc.tintuc': ApiTintucTintuc;
+      'api::trang-chu-introduction.trang-chu-introduction': ApiTrangChuIntroductionTrangChuIntroduction;
     }
   }
 }

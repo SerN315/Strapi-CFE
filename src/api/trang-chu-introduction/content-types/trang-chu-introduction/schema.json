@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trang_chu_introductions",
+  "info": {
+    "singularName": "trang-chu-introduction",
+    "pluralName": "trang-chu-introductions",
+    "displayName": "TrangChu - introduction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "anh_1": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_2": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_3": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tieu_de_1": {
+      "type": "string"
+    },
+    "tieu_de_2": {
+      "type": "string"
+    },
+    "doan_van_1": {
+      "type": "text"
+    },
+    "doan_van_2": {
+      "type": "text"
+    }
+  }
+}
