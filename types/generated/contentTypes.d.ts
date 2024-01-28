@@ -964,12 +964,12 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     anh_3: Attribute.Media;
     doanvan4: Attribute.Text;
     doanvan5: Attribute.Text;
-    doanvan6: Attribute.String;
+    doanvan6: Attribute.Text;
     doanvan7: Attribute.Text;
-    doanvan8: Attribute.String;
+    doanvan8: Attribute.Text;
     doanvan9: Attribute.Text;
     doanvan10: Attribute.Text;
-    doanvan11: Attribute.String;
+    doanvan11: Attribute.Text;
     doanvan12: Attribute.Text;
     anh_4: Attribute.Media;
     anh_5: Attribute.Media;
