@@ -815,6 +815,39 @@ export interface ApiAboutIntroductionAboutIntroduction
   };
 }
 
+export interface ApiFooterFooter extends Schema.CollectionType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Attribute.String;
+    sdt: Attribute.String;
+    email: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFundingFunding extends Schema.CollectionType {
   collectionName: 'fundings';
   info: {
@@ -982,6 +1015,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
+      'api::footer.footer': ApiFooterFooter;
       'api::funding.funding': ApiFundingFunding;
       'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
       'api::qn-a.qn-a': ApiQnAQnA;
