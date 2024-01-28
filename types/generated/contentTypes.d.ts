@@ -918,6 +918,30 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
   };
 }
 
+export interface ApiQnAQnA extends Schema.CollectionType {
+  collectionName: 'qn_as';
+  info: {
+    singularName: 'qn-a';
+    pluralName: 'qn-as';
+    displayName: 'Q&A';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CauHoi: Attribute.Text & Attribute.Required;
+    CauTraLoi: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::qn-a.qn-a', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::qn-a.qn-a', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTintucTintuc extends Schema.CollectionType {
   collectionName: 'tintucs';
   info: {
@@ -1032,6 +1056,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::funding.funding': ApiFundingFunding;
       'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
+      'api::qn-a.qn-a': ApiQnAQnA;
       'api::tintuc.tintuc': ApiTintucTintuc;
       'api::trang-chu-introduction.trang-chu-introduction': ApiTrangChuIntroductionTrangChuIntroduction;
     }
