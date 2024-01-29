@@ -1002,7 +1002,7 @@ export interface ApiTrangChuIntroductionTrangChuIntroduction
   info: {
     singularName: 'trang-chu-introduction';
     pluralName: 'trang-chu-introductions';
-    displayName: 'TrangChu - introduction';
+    displayName: 'TrangChu - GioiThieu';
     description: '';
   };
   options: {
@@ -1012,10 +1012,10 @@ export interface ApiTrangChuIntroductionTrangChuIntroduction
     anh_1: Attribute.Media;
     anh_2: Attribute.Media;
     anh_3: Attribute.Media;
-    tieu_de_1: Attribute.String;
-    tieu_de_2: Attribute.String;
+    tieu_de: Attribute.String;
     doan_van_1: Attribute.Text;
     doan_van_2: Attribute.Text;
+    ViTri: Attribute.Integer & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
