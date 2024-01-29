@@ -4,7 +4,7 @@
   "info": {
     "singularName": "trang-chu-introduction",
     "pluralName": "trang-chu-introductions",
-    "displayName": "TrangChu - introduction",
+    "displayName": "TrangChu - GioiThieu",
     "description": ""
   },
   "options": {
@@ -45,10 +45,7 @@
         "audios"
       ]
     },
-    "tieu_de_1": {
-      "type": "string"
-    },
-    "tieu_de_2": {
+    "tieu_de": {
       "type": "string"
     },
     "doan_van_1": {
@@ -56,6 +53,11 @@
     },
     "doan_van_2": {
       "type": "text"
+    },
+    "ViTri": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }
