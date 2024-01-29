@@ -14,7 +14,7 @@
   "attributes": {
     "anh_1": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -25,7 +25,7 @@
     },
     "anh_2": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -36,7 +36,7 @@
     },
     "anh_3": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
