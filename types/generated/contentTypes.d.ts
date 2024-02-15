@@ -978,6 +978,7 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     anh_8: Attribute.Media;
     anh_9: Attribute.Media;
     anh_10: Attribute.Media;
+    Cre: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

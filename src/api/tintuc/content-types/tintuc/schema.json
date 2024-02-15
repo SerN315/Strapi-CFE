@@ -163,6 +163,9 @@
         "videos",
         "audios"
       ]
+    },
+    "Cre": {
+      "type": "string"
     }
   }
 }
