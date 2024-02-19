@@ -979,6 +979,7 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     anh_9: Attribute.Media;
     anh_10: Attribute.Media;
     Cre: Attribute.String;
+    loaitin: Attribute.Enumeration<['tintuc', 'baodientu']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

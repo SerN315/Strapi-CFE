@@ -166,6 +166,13 @@
     },
     "Cre": {
       "type": "string"
+    },
+    "loaitin": {
+      "type": "enumeration",
+      "enum": [
+        "tintuc",
+        "baodientu"
+      ]
     }
   }
 }
