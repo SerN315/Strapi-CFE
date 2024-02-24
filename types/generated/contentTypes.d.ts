@@ -830,6 +830,7 @@ export interface ApiFooterFooter extends Schema.CollectionType {
     address: Attribute.String;
     sdt: Attribute.String;
     email: Attribute.String;
+    facebook: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
