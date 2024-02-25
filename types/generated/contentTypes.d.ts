@@ -1037,6 +1037,37 @@ export interface ApiTrangChuIntroductionTrangChuIntroduction
   };
 }
 
+export interface ApiVideoVideo extends Schema.CollectionType {
+  collectionName: 'videos';
+  info: {
+    singularName: 'video';
+    pluralName: 'videos';
+    displayName: 'Video-TrangChu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Video: Attribute.Media;
+    Title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::video.video',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::video.video',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1062,6 +1093,7 @@ declare module '@strapi/types' {
       'api::qn-a.qn-a': ApiQnAQnA;
       'api::tintuc.tintuc': ApiTintucTintuc;
       'api::trang-chu-introduction.trang-chu-introduction': ApiTrangChuIntroductionTrangChuIntroduction;
+      'api::video.video': ApiVideoVideo;
     }
   }
 }
