@@ -898,7 +898,6 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
     HoTen: Attribute.String & Attribute.Required;
     ChucVu: Attribute.String & Attribute.Required;
     MoTaThem: Attribute.Text;
-    Anh: Attribute.Media & Attribute.Required;
     Ban: Attribute.String;
     Gen: Attribute.Integer & Attribute.Required;
     createdAt: Attribute.DateTime;
