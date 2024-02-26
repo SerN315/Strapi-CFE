@@ -24,14 +24,6 @@
     "MoTaThem": {
       "type": "text"
     },
-    "Anh": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "Ban": {
       "type": "string",
       "required": false
