@@ -938,9 +938,17 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
   attributes: {
     HoTen: Attribute.String & Attribute.Required;
     ChucVu: Attribute.String & Attribute.Required;
-    MoTaThem: Attribute.Text;
-    Ban: Attribute.String;
     Gen: Attribute.Integer & Attribute.Required;
+    Ban: Attribute.Enumeration<
+      [
+        'Ban Gi\u00E1m \u0110\u1ED1c',
+        'Ban \u0110\u1ED1i Ngo\u1EA1i',
+        'Ban T\u1ED5 Ch\u1EE9c',
+        'Ban Truy\u1EC1n Th\u00F4ng',
+        'Ban D\u1EF1 \u00C1n'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

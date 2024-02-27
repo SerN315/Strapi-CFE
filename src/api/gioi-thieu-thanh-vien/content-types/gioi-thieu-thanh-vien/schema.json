@@ -21,15 +21,19 @@
       "type": "string",
       "required": true
     },
-    "MoTaThem": {
-      "type": "text"
-    },
-    "Ban": {
-      "type": "string",
-      "required": false
-    },
     "Gen": {
       "type": "integer",
+      "required": true
+    },
+    "Ban": {
+      "type": "enumeration",
+      "enum": [
+        "Ban Giám Đốc",
+        "Ban Đối Ngoại",
+        "Ban Tổ Chức",
+        "Ban Truyền Thông",
+        "Ban Dự Án"
+      ],
       "required": true
     }
   }
