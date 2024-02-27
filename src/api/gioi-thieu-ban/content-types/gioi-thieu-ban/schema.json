@@ -4,20 +4,27 @@
   "info": {
     "singularName": "gioi-thieu-ban",
     "pluralName": "gioi-thieu-bans",
-    "displayName": "GioiThieu - Ban"
+    "displayName": "GioiThieu - Ban",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Ten_ban": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "Mieu_ta": {
       "type": "text"
+    },
+    "Ten_ban": {
+      "type": "enumeration",
+      "enum": [
+        "Ban Giám Đốc",
+        "Ban Đối Ngoại",
+        "Ban Tổ Chức",
+        "Ban Truyền Thông",
+        "Ban Dự Án"
+      ],
+      "required": true
     }
   }
 }

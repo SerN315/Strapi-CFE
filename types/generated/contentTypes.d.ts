@@ -888,13 +888,23 @@ export interface ApiGioiThieuBanGioiThieuBan extends Schema.CollectionType {
     singularName: 'gioi-thieu-ban';
     pluralName: 'gioi-thieu-bans';
     displayName: 'GioiThieu - Ban';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Ten_ban: Attribute.String & Attribute.Required & Attribute.Unique;
     Mieu_ta: Attribute.Text;
+    Ten_ban: Attribute.Enumeration<
+      [
+        'Ban Gi\u00E1m \u0110\u1ED1c',
+        'Ban \u0110\u1ED1i Ngo\u1EA1i',
+        'Ban T\u1ED5 Ch\u1EE9c',
+        'Ban Truy\u1EC1n Th\u00F4ng',
+        'Ban D\u1EF1 \u00C1n'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
