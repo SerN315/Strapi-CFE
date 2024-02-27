@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gioi_thieu_bans",
+  "info": {
+    "singularName": "gioi-thieu-ban",
+    "pluralName": "gioi-thieu-bans",
+    "displayName": "GioiThieu - Ban"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ten_ban": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Mieu_ta": {
+      "type": "text"
+    }
+  }
+}
