@@ -882,6 +882,37 @@ export interface ApiFundingFunding extends Schema.CollectionType {
   };
 }
 
+export interface ApiGioiThieuBanGioiThieuBan extends Schema.CollectionType {
+  collectionName: 'gioi_thieu_bans';
+  info: {
+    singularName: 'gioi-thieu-ban';
+    pluralName: 'gioi-thieu-bans';
+    displayName: 'GioiThieu - Ban';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Ten_ban: Attribute.String & Attribute.Required & Attribute.Unique;
+    Mieu_ta: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gioi-thieu-ban.gioi-thieu-ban',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gioi-thieu-ban.gioi-thieu-ban',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGioiThieuThanhVienGioiThieuThanhVien
   extends Schema.CollectionType {
   collectionName: 'gioi_thieu_thanh_viens';
@@ -1088,6 +1119,7 @@ declare module '@strapi/types' {
       'api::about-introduction.about-introduction': ApiAboutIntroductionAboutIntroduction;
       'api::footer.footer': ApiFooterFooter;
       'api::funding.funding': ApiFundingFunding;
+      'api::gioi-thieu-ban.gioi-thieu-ban': ApiGioiThieuBanGioiThieuBan;
       'api::gioi-thieu-thanh-vien.gioi-thieu-thanh-vien': ApiGioiThieuThanhVienGioiThieuThanhVien;
       'api::qn-a.qn-a': ApiQnAQnA;
       'api::tintuc.tintuc': ApiTintucTintuc;
