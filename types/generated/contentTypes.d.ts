@@ -949,6 +949,7 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
       ]
     > &
       Attribute.Required;
+    AnhThanhVien: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

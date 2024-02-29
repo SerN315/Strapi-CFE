@@ -35,6 +35,14 @@
         "Ban Dự Án"
       ],
       "required": true
+    },
+    "AnhThanhVien": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
