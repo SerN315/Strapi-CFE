@@ -901,7 +901,8 @@ export interface ApiGioiThieuBanGioiThieuBan extends Schema.CollectionType {
         'Ban \u0110\u1ED1i Ngo\u1EA1i',
         'Ban T\u1ED5 Ch\u1EE9c',
         'Ban Truy\u1EC1n Th\u00F4ng',
-        'Ban D\u1EF1 \u00C1n'
+        'Ban D\u1EF1 \u00C1n',
+        'Testing'
       ]
     > &
       Attribute.Required;

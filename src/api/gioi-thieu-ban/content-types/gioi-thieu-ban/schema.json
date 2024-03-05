@@ -22,7 +22,8 @@
         "Ban Đối Ngoại",
         "Ban Tổ Chức",
         "Ban Truyền Thông",
-        "Ban Dự Án"
+        "Ban Dự Án",
+        "Testing"
       ],
       "required": true
     }
