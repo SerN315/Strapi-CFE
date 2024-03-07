@@ -23,7 +23,8 @@
         "Ban Tổ Chức",
         "Ban Truyền Thông",
         "Ban Dự Án",
-        "Testing"
+        "Testing",
+        "Giới thiệu chung"
       ],
       "required": true
     }
