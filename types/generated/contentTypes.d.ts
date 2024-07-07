@@ -403,9 +403,12 @@ export interface PluginUploadFile extends Schema.CollectionType {
     folderPath: Attribute.String &
       Attribute.Required &
       Attribute.Private &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -441,9 +444,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   attributes: {
     name: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     pathId: Attribute.Integer & Attribute.Required & Attribute.Unique;
     parent: Attribute.Relation<
       'plugin::upload.folder',
@@ -462,9 +468,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
     >;
     path: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -503,6 +512,12 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
+    status: Attribute.Enumeration<
+      ['ready', 'blocked', 'failed', 'done', 'empty']
+    > &
+      Attribute.Required;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -551,11 +566,13 @@ export interface PluginContentReleasesReleaseAction
       'morphToOne'
     >;
     contentType: Attribute.String & Attribute.Required;
+    locale: Attribute.String;
     release: Attribute.Relation<
       'plugin::content-releases.release-action',
       'manyToOne',
       'plugin::content-releases.release'
     >;
+    isEntryValid: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -595,10 +612,13 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 50;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
     code: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -781,10 +801,10 @@ export interface ApiAboutIntroductionAboutIntroduction
     draftAndPublish: true;
   };
   attributes: {
-    anh_1: Attribute.Media;
-    anh_2: Attribute.Media;
-    anh_3: Attribute.Media;
-    anh_4: Attribute.Media;
+    anh_1: Attribute.Media<'images' | 'videos'>;
+    anh_2: Attribute.Media<'images' | 'videos'>;
+    anh_3: Attribute.Media<'images' | 'videos'>;
+    anh_4: Attribute.Media<'images' | 'videos'>;
     tieu_de: Attribute.String & Attribute.Required & Attribute.Unique;
     tieu_de_phu: Attribute.String & Attribute.Required;
     doan_van_1: Attribute.Text & Attribute.Required;
@@ -792,10 +812,13 @@ export interface ApiAboutIntroductionAboutIntroduction
     vi_tri: Attribute.Integer &
       Attribute.Required &
       Attribute.Unique &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 10;
-      }> &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 10;
+        },
+        number
+      > &
       Attribute.DefaultTo<1>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -950,7 +973,7 @@ export interface ApiGioiThieuThanhVienGioiThieuThanhVien
       ]
     > &
       Attribute.Required;
-    AnhThanhVien: Attribute.Media & Attribute.Required;
+    AnhThanhVien: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1010,9 +1033,9 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     doanvan1: Attribute.Text;
     doanvan2: Attribute.Text;
     doanvan3: Attribute.Text;
-    anh_1: Attribute.Media;
-    anh_2: Attribute.Media;
-    anh_3: Attribute.Media;
+    anh_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     doanvan4: Attribute.Text;
     doanvan5: Attribute.Text;
     doanvan6: Attribute.Text;
@@ -1022,13 +1045,13 @@ export interface ApiTintucTintuc extends Schema.CollectionType {
     doanvan10: Attribute.Text;
     doanvan11: Attribute.Text;
     doanvan12: Attribute.Text;
-    anh_4: Attribute.Media;
-    anh_5: Attribute.Media;
-    anh_6: Attribute.Media;
-    anh_7: Attribute.Media;
-    anh_8: Attribute.Media;
-    anh_9: Attribute.Media;
-    anh_10: Attribute.Media;
+    anh_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_6: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_7: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_9: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    anh_10: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     Cre: Attribute.String;
     loaitin: Attribute.Enumeration<['tintuc', 'baodientu']>;
     createdAt: Attribute.DateTime;
@@ -1062,9 +1085,9 @@ export interface ApiTrangChuIntroductionTrangChuIntroduction
     draftAndPublish: true;
   };
   attributes: {
-    anh_1: Attribute.Media;
-    anh_2: Attribute.Media;
-    anh_3: Attribute.Media;
+    anh_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     tieu_de: Attribute.String;
     doan_van_1: Attribute.Text;
     doan_van_2: Attribute.Text;
@@ -1098,7 +1121,7 @@ export interface ApiVideoVideo extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Video: Attribute.Media;
+    Video: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     Title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
